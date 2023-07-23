@@ -82,8 +82,3 @@ app.listen(process.env.PORT, () => {
     console.log(`server is running on  http://localhost:${process.env.PORT}`)
 });
 
-// API KEY
-// 9b5888169025ce43ce11bb3805674c68-us21
-
-//List ID
-// 668f66d2be
