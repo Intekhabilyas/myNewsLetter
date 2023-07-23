@@ -1,0 +1,16 @@
+html,
+body {
+    height: 100%;
+}
+
+.jumbotron {
+    height: 40%;
+    width: 100%;
+    background-color: lightgrey;
+    line-height: 60px;
+}
+
+.submitbtn {
+    margin-left: 120px;
+    ;
+}
