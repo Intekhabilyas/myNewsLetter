@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express")
 const app = express();
 const path = require("path");
@@ -6,7 +7,7 @@ const bodyParser = require("body-parser")
 const userlocation = path.join(__dirname, "app2.js");
 const Newsletter = require(userlocation);
 const mongoose = require("mongoose");
-const PORT = 3000;
+// const PORT = 3000;
 
 app.use(express.static("public"))
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -35,10 +36,10 @@ app.post("/", (req, res) => {
     };
     const jsonData = JSON.stringify(data);
 
-    const url = "https://us21.api.mailchimp.com/3.0/lists/668f66d2be";
+    const url = process.env.LIST;
     const options = {
         method: "POST",
-        auth: "intekhabilyas004:9b5888169025ce43ce11bb3805674c68-us21"
+        auth: "hello:" + process.env.APIKEY
     }
     const request = https.request(url, options, (response) => {
         var mynewFile;
@@ -77,8 +78,8 @@ app.post("/failure", (req, res) => {
     res.redirect("/");
 });
 
-app.listen(PORT, () => {
-    console.log(`server is running on  http://localhost:${PORT}`)
+app.listen(process.env.PORT, () => {
+    console.log(`server is running on  http://localhost:${process.env.PORT}`)
 });
 
 // API KEY
