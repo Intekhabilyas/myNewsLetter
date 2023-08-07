@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
+<html lang="en" class="h-100" data-bs-theme="auto">
 
 <head>
     <script src="/docs/5.3/assets/js/color-modes.js"></script>
@@ -8,18 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.112.5">
-    <title>My NewsLetter SignUp</title>
+    <meta name="generator" content="Hugo 0.115.4">
+    <title>NewsLetter</title>
+
+    <!-- <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/"> -->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <!-- <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/"> -->
-
-
-
-
-
-    <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
     <!-- Favicons -->
@@ -109,11 +103,11 @@
 
 
     <!-- Custom styles for this template -->
-    <link href="css/sign-in.css" rel="stylesheet">
+    <link href="./css/home.css" rel="stylesheet">
 </head>
 
-<body class="d-flex align-items-center py-4 bg-body-tertiary">
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+<body class="d-flex h-100 text-center text-bg-dark">
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
         <symbol id="check2" viewBox="0 0 16 16">
             <path
                 d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
@@ -182,37 +176,34 @@
     </div>
 
 
-    <main class="form-signin w-100 m-auto">
-        <form action="/signup" method="post">
-            <div class="image">
-                <img class="mb-4" src="images/mail.avif" alt="hello" width="92" height="77">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="mb-auto">
+            <div>
+                <h3 class="float-md-start mb-0">Cover</h3>
+                <nav class="nav nav-masthead justify-content-center float-md-end">
+                    <!-- <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a> -->
+                    <a class="nav-link fw-bold py-1 px-0" href="/auth/Google"> Google </a>
+                    <a class="nav-link fw-bold py-1 px-0" href="/signup"> Signup </a>
+                </nav>
             </div>
-            <h1 class="h3 mb-3 fw-normal">NewsLetter SignUp</h1>
+        </header>
 
-            <div class="form-floating">
-                <input type="text" class="form-control top" id="floatingInput" name="firstName"
-                    placeholder="First Name">
-                <label for="floatingInput">First Name</label>
-            </div>
-            <div class="form-floating">
-                <input type="text" class="form-control middle" id="floatingInput" name="lastName"
-                    placeholder="Last Name">
-                <label for="floatingInput">Last Name</label>
-            </div>
-            <div class="form-floating">
-                <input type="email" class="form-control bottom" id="floatingInput" name="email"
-                    placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
-            </div>
+        <main class="px-3">
+            <h1>Welcome to NewsLetter Home Page</h1>
+            <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit
+                the text, and add your own fullscreen background photo to make it your own.</p>
+            <p class="lead">
+                <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Learn more</a>
+            </p>
+        </main>
 
-
-            <button class="btn btn-primary w-100 py-2" type="submit">Sign up</button>
-            <p class="mt-5 mb-3 text-body-secondary">&copy; 2023–2025</p>
-        </form>
-        <i class="bi bi-google" href="/auth/Google">Google SignUp</i>
-    </main>
+        <footer class="mt-auto text-white-50">
+            <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a
+                    href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
+        </footer>
+    </div>
     <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
 
 </body>
